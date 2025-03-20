@@ -1,0 +1,18 @@
+{
+    "orders": [
+        {
+            "id": 1,
+            "name": "Testowe Zamówienie",
+            "person": "Testowy Użytkownik",
+            "city": "Warszawa",
+            "date": "2025-03-19 12:00"
+        },
+        {
+            "id": 2,
+            "name": "Przykładowe Zamówienie",
+            "person": "Anna Kowalska",
+            "city": "Gdańsk",
+            "date": "2025-03-19 14:30"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+<mvc:View
+    controllerName="sapui5.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page title="Lista Zamówień">
+        <content>
+            <VBox>
+                <Input placeholder="Nazwa zamówienia" value="{/newOrder/name}" />
+                <Input placeholder="Osoba składająca" value="{/newOrder/person}" />
+                <Input placeholder="Miasto" value="{/newOrder/city}" />
+                <Button text="Dodaj Zamówienie" press="onAddOrder" class="sapUiSmallMarginTop"/>
+            </VBox>
+
+            <List items="{/orders}" id="orderList" growing="true">
+                <CustomListItem>
+                    <HBox>
+                        <Text text="{name} - {person} - {city}" />
+                        <Button text="Usuń" press="onDeleteOrder">
+                            <customData>
+                                <core:CustomData key="orderId" value="{id}" />
+                            </customData>
+                        </Button>
+                    </HBox>
+                </CustomListItem>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

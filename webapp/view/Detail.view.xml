@@ -1,0 +1,21 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="sapui5.controller.Detail">
+
+    <Page title="{name}">
+        <content>
+            <Text text="ID: {id}"/>
+            <Text text="Status: {status}"/>
+            <Text text="Data dodania: {date}"/>
+        </content>
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Wróć" press="onNavBack"/>
+                </contentLeft>
+            </Bar>
+        </footer>
+    </Page>
+
+</mvc:View>

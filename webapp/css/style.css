@@ -1,0 +1,13 @@
+.sapUiBody {
+    background-color: #f4f4f4;
+    font-family: "Arial", sans-serif;
+}
+
+.sapMPage {
+    padding: 20px;
+}
+
+.sapMButton {
+    background-color: #007aff;
+    color: white;
+}

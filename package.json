@@ -1,0 +1,21 @@
+{
+  "name": "sapui5",
+  "version": "1.0.0",
+  "description": "Aplikacja SAPUI5",
+ "scripts": {
+  "start": "concurrently \"ui5 serve --port 8081 -o index.html\" \"nodemon server.js\"",
+  "server": "nodemon server.js",
+  "ui5": "ui5 serve --port 8081 -o index.html",
+  "build": "ui5 build preload --include-task=createComponentPreload"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4.0.13",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.9",
+    "ui5-middleware-simpleproxy": "^3.4.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
