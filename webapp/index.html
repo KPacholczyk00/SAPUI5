@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SAPUI5 App</title>
+    <script id="sap-ui-bootstrap"
+            src="https://ui5.sap.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3"
+            data-sap-ui-resourceroots='{"sapui5": "./"}'
+            data-sap-ui-async="true">
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.require(["sap/ui/core/Component"], function (Component) {
+                Component.create({
+                    name: "sapui5",
+                    async: true
+                }).then(function (oComponent) {
+                    new sap.m.Shell({
+                        app: new sap.ui.core.ComponentContainer({
+                            component: oComponent
+                        })
+                    }).placeAt("content");
+                }).catch(function (oError) {
+                    console.error("Błąd podczas ładowania komponentu:", oError);
+                });
+            });
+        });
+    </script>
+</head>
+<body class="sapUiBody" id="content"></body>
+</html>
